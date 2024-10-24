@@ -1,7 +1,7 @@
 FROM alpine:3.20
 
 ENV SONATYPE_DIR="/opt/sonatype"
-ENV NEXUS_VERSION="3.70.3-01" \
+ENV NEXUS_VERSION="3.73.0-12" \
     NEXUS_HOME="${SONATYPE_DIR}/nexus" \
     NEXUS_DATA="/nexus-data" \
     SONATYPE_WORK=${SONATYPE_DIR}/sonatype-work \
@@ -11,7 +11,7 @@ ENV NEXUS_VERSION="3.70.3-01" \
 
 RUN set -x \
     && apk --no-cache add \
-        openjdk8-jre-base \
+        openjdk17-jre-headless \
         libressl \
         nss \
         su-exec \
